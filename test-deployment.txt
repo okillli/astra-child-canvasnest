@@ -26,3 +26,7 @@ Phase 1 CSS improvements now live:
 🎉 Auto-deployment is fully functional! 🎉
 
 Last test: December 12, 2025 - SUCCESS!
+
+🚀 TESTING CANVASNEST.CO.UK DEPLOYMENT 🚀
+If you see this line, the webhook is working on the CORRECT website!
+Timestamp: 2025-12-12 07:25 UTC
