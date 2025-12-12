@@ -24,7 +24,7 @@ $data = json_decode($payload, true);
 
 // Only deploy on pushes to main branch
 if ($data['ref'] === 'refs/heads/main') {
-    $theme_dir = '/home/u977687187/public_html/wp-content/themes/astra-child-canvasnest';
+    $theme_dir = '/home/u977687187/domains/canvasnest.co.uk/public_html/wp-content/themes/astra-child-canvasnest';
 
     // Change to theme directory and pull latest code
     chdir($theme_dir);
