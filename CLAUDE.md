@@ -193,15 +193,26 @@ git add . && git commit -m "message" && git push origin main
 
 ---
 
-## 📚 DOCUMENTATION FILES
+## 📚 DOCUMENTATION
 
-**Comprehensive Guides Created:**
-1. **PHASE-2-COMPREHENSIVE-GUIDE.md** - Complete manual task instructions
-2. **SESSION-SUMMARY-PHASE-3.md** - Session summary with next steps
-3. **FINAL-STATUS-2025-12-12.md** - Badge fix details
-4. **SESSION-PROGRESS-2025-12-12.md** - Detailed progress log
+**All documentation organized in `/docs` directory:**
 
-**All documentation ready for context compaction.**
+**Quick Links:**
+- 📖 **START HERE:** [Manual Task Guide](docs/guides/PHASE-2-COMPREHENSIVE-GUIDE.md)
+- 📊 **Latest Session:** [Phase 3 Summary](docs/sessions/SESSION-SUMMARY-PHASE-3.md)
+- 🎨 **UI/UX Priorities:** [Analysis](docs/guides/ui-ux-analysis.md)
+- 🔬 **Research:** [Sale Badge Strategy](docs/research/RESEARCH-SALE-BADGE-STRATEGY.md)
+
+**Documentation Structure:**
+```
+/docs
+├── /sessions    - Session progress & summaries
+├── /guides      - Implementation how-to guides
+├── /research    - Research & decision analysis
+└── /archive     - Historical documents
+```
+
+See [docs/README.md](docs/README.md) for complete documentation index.
 
 ---
 
@@ -212,4 +223,4 @@ git add . && git commit -m "message" && git push origin main
 - Add HTML to footer widget (code provided in guide)
 - Test mobile site on phone
 
-**See PHASE-2-COMPREHENSIVE-GUIDE.md for complete instructions.**
+**See [PHASE-2-COMPREHENSIVE-GUIDE.md](docs/guides/PHASE-2-COMPREHENSIVE-GUIDE.md) for complete instructions.**
