@@ -142,4 +142,41 @@ git add . && git commit -m "message" && git push origin main
 ---
 
 **Last Updated:** December 12, 2025
-**Status:** ACTIVE - Working on Sale Badge Redesign
+**Status:** URGENT - Layout broken, reverting bad changes
+
+---
+
+## 🚨 CRITICAL STATUS UPDATE (URGENT!)
+
+**LAYOUT BROKEN ISSUE:**
+- Added `add_filter('astra_enable_woocommerce_integration', '__return_false');` to functions.php
+- This disabled ALL Astra WooCommerce styling (not just badges!)
+- Product grid layout completely destroyed
+- **NEED TO REVERT IMMEDIATELY**
+
+**Badge Research Completed:**
+- Research shows: Percentage badges convert 20-33% better than "Sale"
+- Current problem: TWO badges (Woo Discount Rules + Astra) = clutter penalty
+- **Solution:** Keep ONE percentage badge, restyle professionally
+- **Do NOT disable Astra WooCommerce integration** (breaks layout!)
+
+**Proper Fix:**
+- Use surgical CSS targeting to hide ONLY duplicate badges
+- Restyle Woo Discount Rules percentage badge with brand colors
+- Keep all other Astra styling intact
+
+**Plugin Sources Found:**
+- Green "-20%!" = Woo Discount Rules plugin
+- Red "Sale!" = Astra theme
+- Settings location: WP Admin → WooCommerce → Discount Rules → Settings → Product
+
+**All Installed Plugins (via Playwright):**
+woo-discount-rules, customer-reviews-woocommerce, advanced-woo-search, woocommerce, all-in-one-seo-pack, google-analytics-for-wordpress, astra-sites, jetpack, google-site-kit, wp-smushit, google-listings-and-ads, complianz-gdpr
+
+**WordPress MCP Info:**
+- Available at github.com/WordPress/mcp-adapter
+- Would give direct WordPress access for Claude
+- Useful long-term but not urgent
+
+**IMMEDIATE ACTION:**
+Revert functions.php filter, implement targeted CSS solution instead

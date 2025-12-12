@@ -161,61 +161,66 @@ body {
    ======================================== */
 
 /* ----------------------------------------
-   1. SALE BADGE REDESIGN - CRITICAL
+   1. SALE BADGE REDESIGN - RESEARCH-BACKED
    ---------------------------------------- */
 
-/* HIDE green circular percentage badge (inside thumbnail wrap) */
-.woocommerce .astra-shop-thumbnail-wrap span.onsale {
-    display: none !important;
-}
+/* Strategy: Keep percentage badge (converts 20-33% better per research)
+   but restyle it professionally and hide Astra's duplicate badge */
 
-/* HIDE the "Sale!" text label */
+/* HIDE Astra's duplicate "Sale!" text badge ONLY */
 .woocommerce .ast-on-card-button.ast-onsale-card {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
-/* Now create ONE clean sale badge using CSS ::before pseudo-element */
-.woocommerce ul.products li.product.sale .astra-shop-thumbnail-wrap::before {
-    content: "SALE" !important;
-    display: block !important;
+/* RESTYLE Woo Discount Rules percentage badge (keep functionality, fix appearance) */
+.woocommerce span.onsale,
+.woocommerce ul.products li.product span.onsale {
+    /* Remove ugly green, add professional brand colors */
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    color: #ffffff !important;
+
+    /* Clean, professional typography */
+    font-size: 13px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1 !important;
+    text-transform: uppercase !important;
+
+    /* Proper spacing and shape */
+    padding: 8px 12px !important;
+    border-radius: 6px !important;
+
+    /* Remove circular styling */
+    width: auto !important;
+    height: auto !important;
+    min-width: unset !important;
+    min-height: unset !important;
+    border-radius: 6px !important; /* Rectangle, not circle */
+
+    /* Professional shadow */
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.25) !important;
+
+    /* Positioning */
     position: absolute !important;
     top: 12px !important;
     left: 12px !important;
-    z-index: 999 !important;
-
-    /* Styling - elegant and professional */
-    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
-    color: #ffffff !important;
-
-    /* Typography */
-    font-size: 12px !important;
-    font-weight: 700 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-    line-height: 1 !important;
-
-    /* Spacing */
-    padding: 8px 14px !important;
-
-    /* Shape - rounded rectangle */
-    border-radius: 6px !important;
-
-    /* Subtle shadow for depth */
-    box-shadow: 0 2px 8px rgba(214, 48, 49, 0.3) !important;
+    z-index: 99 !important;
 
     /* Smooth transitions */
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-/* Make thumbnail wrap positioned so ::before works */
-.woocommerce ul.products li.product .astra-shop-thumbnail-wrap {
-    position: relative !important;
+/* Hover effect for sale badge */
+.woocommerce ul.products li.product:hover span.onsale {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.35) !important;
 }
 
-/* Hover effect for sale badge */
-.woocommerce ul.products li.product.sale:hover .astra-shop-thumbnail-wrap::before {
-    transform: scale(1.05) !important;
-    box-shadow: 0 4px 12px rgba(214, 48, 49, 0.4) !important;
+/* Ensure product thumbnail wrapper is positioned for absolute badge */
+.woocommerce ul.products li.product .astra-shop-thumbnail-wrap {
+    position: relative !important;
 }
 
 /* Ensure product cards have relative positioning for absolute badge */

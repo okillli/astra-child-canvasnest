@@ -41,12 +41,11 @@ add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_styles', 15 );
  */
 
 /**
- * CRITICAL FIX: Disable Astra's WooCommerce Integration
- * This reverts WooCommerce styling to standard WordPress/WooCommerce defaults
- * Allows us to easily customize sale badges and other WooCommerce elements
- * without fighting Astra's aggressive CSS specificity
+ * REMOVED: Astra WooCommerce disable filter
+ * Reason: It disabled ALL WooCommerce styling, not just badges!
+ * This broke the entire product grid layout
+ * Using targeted CSS in style.css instead to hide ONLY badges
  */
-add_filter( 'astra_enable_woocommerce_integration', '__return_false' );
 
 /**
  * Inject critical CSS with maximum priority
