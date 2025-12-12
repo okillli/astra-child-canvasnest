@@ -44,9 +44,14 @@ Domain Path: /languages
 
 /* Change product titles from red to neutral dark color */
 .woocommerce ul.products li.product h2,
-.woocommerce ul.products li.product .woocommerce-loop-product__title {
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title a,
+.woocommerce ul.products li.product h2 a,
+.woocommerce-page ul.products li.product h2,
+.woocommerce-page ul.products li.product .woocommerce-loop-product__title {
     color: #2c3e50 !important; /* Professional dark gray instead of red */
     font-weight: 600 !important;
+    text-decoration: none !important;
 }
 
 /* ----------------------------------------
@@ -107,6 +112,43 @@ body {
     font-size: 16px !important;
     margin: 0 !important;
     text-align: center !important;
+}
+
+/* ----------------------------------------
+   6. SHOP PAGE SPECIFIC IMPROVEMENTS
+   ---------------------------------------- */
+
+/* Page title styling */
+.woocommerce-products-header h1,
+.woocommerce h1.page-title {
+    color: #2c3e50 !important;
+    font-weight: 700 !important;
+    margin-bottom: 30px !important;
+}
+
+/* Shop ordering dropdown */
+.woocommerce .woocommerce-ordering select {
+    padding: 8px 12px !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 4px !important;
+    background-color: #fff !important;
+}
+
+/* Results count */
+.woocommerce .woocommerce-result-count {
+    color: #666 !important;
+    font-size: 14px !important;
+}
+
+/* Sale badge improvements - cleaner design */
+.woocommerce span.onsale {
+    background-color: #d63031 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    padding: 6px 12px !important;
+    border-radius: 4px !important;
+    font-size: 13px !important;
+    line-height: 1 !important;
 }
 
 /* ----------------------------------------
