@@ -39,3 +39,87 @@ add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_styles', 15 );
  * Template & CSS Customizations
  * Claude Code can add custom styling and template overrides here
  */
+
+/**
+ * Inject critical CSS with maximum priority
+ * This overrides Astra theme's sale badge styles that can't be overridden via style.css
+ * Uses inline CSS in <head> with ultra-specific selectors
+ */
+function canvasnest_critical_sale_badge_css() {
+    // Only load on shop pages
+    if ( ! is_shop() && ! is_product_category() && ! is_product_tag() && ! is_product() ) {
+        return;
+    }
+    ?>
+    <style id="canvasnest-critical-badges">
+        /* CRITICAL: Hide ALL Astra sale badges with maximum specificity */
+
+        /* Hide green circular percentage badge */
+        body.woocommerce-shop ul.products li.product .astra-shop-thumbnail-wrap span.onsale,
+        body.woocommerce ul.products li.product .astra-shop-thumbnail-wrap span.onsale,
+        body.archive.woocommerce ul.products li.product .astra-shop-thumbnail-wrap span.onsale,
+        body.woocommerce-page ul.products li.product .astra-shop-thumbnail-wrap span.onsale,
+        .astra-shop-thumbnail-wrap span.onsale {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            width: 0 !important;
+            height: 0 !important;
+            position: absolute !important;
+            left: -9999px !important;
+        }
+
+        /* Hide "Sale!" text badge */
+        body.woocommerce-shop .ast-on-card-button.ast-onsale-card,
+        body.woocommerce .ast-on-card-button.ast-onsale-card,
+        body.archive.woocommerce .ast-on-card-button.ast-onsale-card,
+        body.woocommerce-page .ast-on-card-button.ast-onsale-card,
+        span.ast-onsale-card,
+        .ast-onsale-card {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            width: 0 !important;
+            height: 0 !important;
+            position: absolute !important;
+            left: -9999px !important;
+        }
+
+        /* Create our clean sale badge */
+        body.woocommerce ul.products li.product.sale .astra-shop-thumbnail-wrap::before,
+        body.woocommerce-shop ul.products li.product.sale .astra-shop-thumbnail-wrap::before,
+        body.archive.woocommerce ul.products li.product.sale .astra-shop-thumbnail-wrap::before {
+            content: "SALE" !important;
+            display: block !important;
+            position: absolute !important;
+            top: 12px !important;
+            left: 12px !important;
+            z-index: 999 !important;
+            background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+            color: #ffffff !important;
+            font-size: 12px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.5px !important;
+            line-height: 1 !important;
+            padding: 8px 14px !important;
+            border-radius: 6px !important;
+            box-shadow: 0 2px 8px rgba(214, 48, 49, 0.3) !important;
+            transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+        }
+
+        /* Ensure thumbnail wrap is positioned */
+        body.woocommerce ul.products li.product .astra-shop-thumbnail-wrap,
+        body.woocommerce-shop ul.products li.product .astra-shop-thumbnail-wrap {
+            position: relative !important;
+        }
+
+        /* Hover effect */
+        body.woocommerce ul.products li.product.sale:hover .astra-shop-thumbnail-wrap::before {
+            transform: scale(1.05) !important;
+            box-shadow: 0 4px 12px rgba(214, 48, 49, 0.4) !important;
+        }
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'canvasnest_critical_sale_badge_css', 999 );
