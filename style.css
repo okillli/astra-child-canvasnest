@@ -19,5 +19,86 @@ Domain Path: /languages
    Canvas Nest Custom Styles
    ======================================== */
 
-/* Placeholder for custom CSS */
-/* Add your custom styles below this line */
+/* ========================================
+   PHASE 1: SAFE CSS IMPROVEMENTS
+   Date: December 12, 2025
+   Testing deployment webhook
+   ======================================== */
+
+/* ----------------------------------------
+   1. PRODUCT GRID SPACING FIX
+   ---------------------------------------- */
+
+/* Fix inconsistent product grid spacing - CRITICAL ISSUE */
+.woocommerce ul.products {
+    display: grid !important;
+    gap: 30px !important; /* Consistent spacing between products */
+}
+
+.woocommerce ul.products li.product {
+    margin-bottom: 0 !important; /* Remove default margin, using gap instead */
+}
+
+/* ----------------------------------------
+   2. PRODUCT TITLE COLOR FIX
+   ---------------------------------------- */
+
+/* Change product titles from red to neutral dark color */
+.woocommerce ul.products li.product h2,
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    color: #2c3e50 !important; /* Professional dark gray instead of red */
+    font-weight: 600 !important;
+}
+
+/* ----------------------------------------
+   3. TYPOGRAPHY IMPROVEMENTS
+   ---------------------------------------- */
+
+/* Improve base typography for better readability */
+body {
+    line-height: 1.6 !important; /* Better line spacing */
+}
+
+/* Product pricing - make more prominent */
+.woocommerce ul.products li.product .price {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-top: 8px !important;
+}
+
+/* ----------------------------------------
+   4. PRODUCT CARD POLISH
+   ---------------------------------------- */
+
+/* Add subtle border to product cards for better definition */
+.woocommerce ul.products li.product {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 15px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Subtle hover effect for better UX */
+.woocommerce ul.products li.product:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ----------------------------------------
+   5. HEADER SPACING IMPROVEMENT
+   ---------------------------------------- */
+
+/* Add better separation between header and content */
+.site-header {
+    margin-bottom: 20px !important;
+}
+
+/* Improve promotional banner spacing */
+.header-widget-region {
+    padding: 12px 20px !important;
+}
+
+/* ----------------------------------------
+   END PHASE 1 IMPROVEMENTS
+   ---------------------------------------- */

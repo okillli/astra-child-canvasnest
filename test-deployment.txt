@@ -1,0 +1,18 @@
+Canvas Nest Theme - Deployment Test File
+
+This file was created on: December 12, 2025
+Purpose: Testing GitHub webhook → Hostinger auto-deployment
+
+If you can see this file on your Hostinger server at:
+/public_html/wp-content/themes/astra-child-canvasnest/test-deployment.txt
+
+Then your GitHub webhook is working correctly!
+
+Next deployment will include UI/UX improvements to:
+- Product grid spacing
+- Typography refinements
+- Color scheme adjustments
+- Mobile responsiveness fixes
+
+---
+Testing webhook deployment... 🚀
