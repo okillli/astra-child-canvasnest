@@ -53,8 +53,8 @@ add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_styles', 15 );
  * This restyles the percentage badge professionally without creating duplicate badges
  */
 function canvasnest_override_badge_styling() {
-    // Only load on shop pages
-    if ( ! is_shop() && ! is_product_category() && ! is_product_tag() && ! is_product() ) {
+    // Load on shop pages, categories, tags, products, and front page (shop is set as landing page)
+    if ( ! is_shop() && ! is_front_page() && ! is_product_category() && ! is_product_tag() && ! is_product() ) {
         return;
     }
     ?>
