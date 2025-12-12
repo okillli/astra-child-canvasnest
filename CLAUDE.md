@@ -146,18 +146,24 @@ git add . && git commit -m "message" && git push origin main
 
 ---
 
-## 🚨 CRITICAL STATUS UPDATE (URGENT!)
+## 📊 CURRENT SESSION STATUS (December 12, 2025)
 
-**LAYOUT BROKEN ISSUE:**
-- Added `add_filter('astra_enable_woocommerce_integration', '__return_false');` to functions.php
-- This disabled ALL Astra WooCommerce styling (not just badges!)
-- Product grid layout completely destroyed
-- **NEED TO REVERT IMMEDIATELY**
+**LAYOUT ISSUE:**
+- ✅ FIXED: Reverted problematic filter, grid layout restored (commits ad75c04, cdea587)
 
-**Badge Research Completed:**
-- Research shows: Percentage badges convert 20-33% better than "Sale"
-- Current problem: TWO badges (Woo Discount Rules + Astra) = clutter penalty
-- **Solution:** Keep ONE percentage badge, restyle professionally
+**BADGE ISSUE:**
+- ❌ CRITICAL: Badge CSS works on HOME page but NOT on SHOP page
+- Root cause: `is_shop()` conditional in functions.php failing
+- TWO badges still showing on /shop/: green "-20%!" + red "Sale!"
+
+**SIDEBAR:**
+- ✅ CONFIRMED: Sidebar HTML exists (Playwright verified)
+- User reports it missing (likely cache issue)
+
+**NEXT PHASE:**
+- Ready for conversation compaction
+- WordPress MCP installation recommended
+- Comprehensive progress saved in SESSION-PROGRESS-2025-12-12.md
 - **Do NOT disable Astra WooCommerce integration** (breaks layout!)
 
 **Proper Fix:**
