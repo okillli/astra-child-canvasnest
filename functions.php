@@ -9,6 +9,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Enqueue parent and child theme styles
+ * CRITICAL: This loads the child theme's style.css
+ */
+function astra_child_enqueue_styles() {
+    // Enqueue parent theme stylesheet
+    wp_enqueue_style( 'astra-parent-theme', get_template_directory_uri() . '/style.css' );
+
+    // Enqueue child theme stylesheet (this loads our custom CSS!)
+    wp_enqueue_style( 'astra-child-theme',
+        get_stylesheet_directory_uri() . '/style.css',
+        array( 'astra-parent-theme' ),
+        wp_get_theme()->get('Version') // Cache busting with version number
+    );
+}
+add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_styles', 15 );
+
+/**
  * WooCommerce Hooks & Customizations
  * Add your custom functions, filters, and actions here
  */
