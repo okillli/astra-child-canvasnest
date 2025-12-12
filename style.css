@@ -164,23 +164,24 @@ body {
    1. SALE BADGE REDESIGN - CRITICAL
    ---------------------------------------- */
 
-/* Hide the percentage badge (green circular) - it's redundant */
+/* HIDE green circular percentage badge (inside thumbnail wrap) */
 .woocommerce .astra-shop-thumbnail-wrap span.onsale {
     display: none !important;
 }
 
-/* Hide the Astra theme's extra "Sale!" badge */
-.ast-on-card-button.ast-onsale-card {
+/* HIDE the "Sale!" text label */
+.woocommerce .ast-on-card-button.ast-onsale-card {
     display: none !important;
 }
 
-/* Keep and style ONLY the standard WooCommerce sale badge */
-.woocommerce span.onsale {
-    /* Positioning */
+/* Now create ONE clean sale badge using CSS ::before pseudo-element */
+.woocommerce ul.products li.product.sale .astra-shop-thumbnail-wrap::before {
+    content: "SALE" !important;
+    display: block !important;
     position: absolute !important;
     top: 12px !important;
     left: 12px !important;
-    z-index: 10 !important;
+    z-index: 999 !important;
 
     /* Styling - elegant and professional */
     background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
@@ -202,21 +203,17 @@ body {
     /* Subtle shadow for depth */
     box-shadow: 0 2px 8px rgba(214, 48, 49, 0.3) !important;
 
-    /* Remove default margins */
-    margin: 0 !important;
-
     /* Smooth transitions */
     transition: transform 0.2s ease, box-shadow 0.2s ease !important;
-
-    /* Remove circle styling */
-    width: auto !important;
-    height: auto !important;
-    min-width: unset !important;
-    min-height: unset !important;
 }
 
-/* Sale badge hover effect */
-.woocommerce ul.products li.product:hover span.onsale {
+/* Make thumbnail wrap positioned so ::before works */
+.woocommerce ul.products li.product .astra-shop-thumbnail-wrap {
+    position: relative !important;
+}
+
+/* Hover effect for sale badge */
+.woocommerce ul.products li.product.sale:hover .astra-shop-thumbnail-wrap::before {
     transform: scale(1.05) !important;
     box-shadow: 0 4px 12px rgba(214, 48, 49, 0.4) !important;
 }
