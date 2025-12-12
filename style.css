@@ -1,0 +1,23 @@
+/*
+Theme Name: Astra Child - Canvas Nest
+Theme URI: https://canvasnest.co.uk
+Description: Custom child theme for Canvas Nest WooCommerce shop with professional spacing, layout fixes, and custom CSS
+Author: Canvas Nest
+Author URI: https://canvasnest.co.uk
+Template: astra
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child-canvasnest
+Domain Path: /languages
+*/
+
+/* Import Astra parent theme styles */
+@import url('../astra/style.css');
+
+/* ========================================
+   Canvas Nest Custom Styles
+   ======================================== */
+
+/* Placeholder for custom CSS */
+/* Add your custom styles below this line */
