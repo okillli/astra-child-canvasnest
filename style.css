@@ -1171,3 +1171,1091 @@ a:hover {
 /* ----------------------------------------
    END TRUST SIGNALS & CONVERSION OPTIMIZATION
    ---------------------------------------- */
+
+
+/* ========================================
+   PHASE 4: CONVERSION FUNNEL & PROFESSIONAL POLISH
+   Critical cart/checkout styling + visual consistency + accessibility
+   ======================================== */
+
+/* ----------------------------------------
+   CART PAGE STYLING
+   Professional cart experience with clear CTAs
+   ---------------------------------------- */
+
+.woocommerce-cart .woocommerce {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 40px 20px !important;
+}
+
+/* Cart table styling */
+.woocommerce table.shop_table {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    margin-bottom: 30px !important;
+    background: #ffffff !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.woocommerce table.shop_table thead {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%) !important;
+}
+
+.woocommerce table.shop_table th {
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    padding: 16px 12px !important;
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 2px solid #d63031 !important;
+}
+
+.woocommerce table.shop_table td {
+    padding: 20px 12px !important;
+    vertical-align: middle !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* Product thumbnail in cart */
+.woocommerce table.shop_table .product-thumbnail img {
+    border-radius: 6px !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1) !important;
+    max-width: 80px !important;
+    height: auto !important;
+}
+
+/* Product name in cart */
+.woocommerce table.shop_table .product-name a {
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.woocommerce table.shop_table .product-name a:hover {
+    color: #d63031 !important;
+}
+
+/* Quantity input in cart */
+.woocommerce .quantity input.qty {
+    width: 70px !important;
+    padding: 8px 12px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    text-align: center !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    transition: border-color 0.3s ease !important;
+}
+
+.woocommerce .quantity input.qty:focus {
+    border-color: #d63031 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(214, 48, 49, 0.1) !important;
+}
+
+/* Remove button */
+.woocommerce a.remove {
+    display: inline-block !important;
+    width: 28px !important;
+    height: 28px !important;
+    line-height: 24px !important;
+    text-align: center !important;
+    border-radius: 50% !important;
+    background: #fee !important;
+    color: #d63031 !important;
+    font-size: 18px !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce a.remove:hover {
+    background: #d63031 !important;
+    color: #ffffff !important;
+    transform: rotate(90deg) !important;
+}
+
+/* Cart totals section */
+.cart-collaterals .cart_totals {
+    background: #f8f9fa !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 30px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.cart-collaterals .cart_totals h2 {
+    margin: 0 0 20px 0 !important;
+    padding-bottom: 15px !important;
+    border-bottom: 2px solid #d63031 !important;
+    color: #2c3e50 !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+}
+
+.cart-collaterals .cart_totals table {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.cart-collaterals .cart_totals th,
+.cart-collaterals .cart_totals td {
+    padding: 12px 0 !important;
+    border: none !important;
+    font-size: 16px !important;
+}
+
+.cart-collaterals .cart_totals .order-total th,
+.cart-collaterals .cart_totals .order-total td {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    padding-top: 20px !important;
+    border-top: 2px solid #d63031 !important;
+}
+
+/* Proceed to checkout button */
+.woocommerce-cart .wc-proceed-to-checkout .checkout-button {
+    display: block !important;
+    width: 100% !important;
+    padding: 18px 30px !important;
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    text-align: center !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(214, 48, 49, 0.3) !important;
+    text-decoration: none !important;
+}
+
+.woocommerce-cart .wc-proceed-to-checkout .checkout-button:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(214, 48, 49, 0.4) !important;
+}
+
+/* Update cart button */
+.woocommerce button[name="update_cart"] {
+    background: #f8f9fa !important;
+    color: #2c3e50 !important;
+    border: 2px solid #e0e0e0 !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce button[name="update_cart"]:hover {
+    background: #e9ecef !important;
+    border-color: #d63031 !important;
+}
+
+/* ----------------------------------------
+   CHECKOUT PAGE STYLING
+   Conversion-optimized checkout flow
+   ---------------------------------------- */
+
+.woocommerce-checkout .woocommerce {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 40px 20px !important;
+}
+
+/* Checkout form styling */
+.woocommerce-checkout .woocommerce-billing-fields h3,
+.woocommerce-checkout .woocommerce-shipping-fields h3,
+.woocommerce-checkout .woocommerce-additional-fields h3 {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    color: #ffffff !important;
+    padding: 15px 20px !important;
+    margin: 0 0 20px 0 !important;
+    border-radius: 8px 8px 0 0 !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+}
+
+.woocommerce-checkout .woocommerce-billing-fields,
+.woocommerce-checkout .woocommerce-shipping-fields,
+.woocommerce-checkout .woocommerce-additional-fields {
+    background: #f8f9fa !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 0 !important;
+    margin-bottom: 30px !important;
+}
+
+.woocommerce-checkout .woocommerce-billing-fields__field-wrapper,
+.woocommerce-checkout .woocommerce-shipping-fields__field-wrapper,
+.woocommerce-checkout .woocommerce-additional-fields__field-wrapper {
+    padding: 20px !important;
+}
+
+/* Form fields */
+.woocommerce-checkout .form-row input.input-text,
+.woocommerce-checkout .form-row select,
+.woocommerce-checkout .form-row textarea {
+    width: 100% !important;
+    padding: 12px 16px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    transition: all 0.3s ease !important;
+    background: #ffffff !important;
+}
+
+.woocommerce-checkout .form-row input.input-text:focus,
+.woocommerce-checkout .form-row select:focus,
+.woocommerce-checkout .form-row textarea:focus {
+    border-color: #d63031 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(214, 48, 49, 0.1) !important;
+}
+
+.woocommerce-checkout .form-row label {
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 8px !important;
+    display: block !important;
+}
+
+.woocommerce-checkout .form-row label .required {
+    color: #d63031 !important;
+}
+
+/* Order review section */
+.woocommerce-checkout #order_review_heading {
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    padding: 15px 20px !important;
+    margin: 0 0 0 0 !important;
+    border-radius: 8px 8px 0 0 !important;
+    font-size: 22px !important;
+    font-weight: 700 !important;
+}
+
+.woocommerce-checkout #order_review {
+    background: #ffffff !important;
+    border: 2px solid #d63031 !important;
+    border-radius: 8px !important;
+    padding: 0 !important;
+    box-shadow: 0 6px 20px rgba(214, 48, 49, 0.15) !important;
+}
+
+.woocommerce-checkout .woocommerce-checkout-review-order {
+    padding: 20px !important;
+}
+
+/* Order review table */
+.woocommerce-checkout-review-order-table {
+    border: none !important;
+    box-shadow: none !important;
+    margin-bottom: 20px !important;
+}
+
+.woocommerce-checkout-review-order-table thead th {
+    background: #f8f9fa !important;
+    border-bottom: 2px solid #e0e0e0 !important;
+}
+
+.woocommerce-checkout-review-order-table .order-total th,
+.woocommerce-checkout-review-order-table .order-total td {
+    font-size: 22px !important;
+    font-weight: 700 !important;
+    color: #d63031 !important;
+    padding-top: 20px !important;
+    border-top: 3px solid #d63031 !important;
+}
+
+/* Payment methods */
+.woocommerce-checkout #payment {
+    background: #f8f9fa !important;
+    border-radius: 0 0 8px 8px !important;
+    padding: 20px !important;
+}
+
+.woocommerce-checkout #payment ul.payment_methods {
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 0 20px 0 !important;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li {
+    background: #ffffff !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    padding: 15px !important;
+    margin-bottom: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li:hover,
+.woocommerce-checkout #payment ul.payment_methods li.wc_payment_method {
+    border-color: #d63031 !important;
+    background: #fff5f5 !important;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li input[type="radio"] {
+    margin-right: 10px !important;
+}
+
+.woocommerce-checkout #payment ul.payment_methods li label {
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    cursor: pointer !important;
+}
+
+/* Place order button */
+.woocommerce-checkout #place_order {
+    display: block !important;
+    width: 100% !important;
+    padding: 20px 30px !important;
+    background: linear-gradient(135deg, #27ae60 0%, #229954 100%) !important;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    border: none !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(39, 174, 96, 0.3) !important;
+}
+
+.woocommerce-checkout #place_order:hover {
+    background: linear-gradient(135deg, #229954 0%, #1e8449 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(39, 174, 96, 0.4) !important;
+}
+
+/* ----------------------------------------
+   MY ACCOUNT PAGE STYLING
+   Customer trust & post-purchase experience
+   ---------------------------------------- */
+
+.woocommerce-account .woocommerce {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 40px 20px !important;
+}
+
+/* Account navigation */
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    background: #f8f9fa !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+    margin-bottom: 8px !important;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a {
+    display: block !important;
+    padding: 12px 16px !important;
+    background: #ffffff !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    color: #2c3e50 !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover,
+.woocommerce-account .woocommerce-MyAccount-navigation ul li.is-active a {
+    background: #d63031 !important;
+    border-color: #d63031 !important;
+    color: #ffffff !important;
+    transform: translateX(5px) !important;
+}
+
+/* Account content */
+.woocommerce-account .woocommerce-MyAccount-content {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 30px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content h2,
+.woocommerce-account .woocommerce-MyAccount-content h3 {
+    color: #2c3e50 !important;
+    border-bottom: 2px solid #d63031 !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 20px !important;
+}
+
+/* Order table */
+.woocommerce-account table.woocommerce-orders-table {
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.woocommerce-account table.woocommerce-orders-table thead th {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    color: #ffffff !important;
+    padding: 12px !important;
+    font-weight: 600 !important;
+}
+
+.woocommerce-account table.woocommerce-orders-table td {
+    padding: 15px 12px !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.woocommerce-account table.woocommerce-orders-table .woocommerce-button {
+    background: #d63031 !important;
+    color: #ffffff !important;
+    padding: 8px 16px !important;
+    border-radius: 6px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.woocommerce-account table.woocommerce-orders-table .woocommerce-button:hover {
+    background: #c0392b !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Address section */
+.woocommerce-account .woocommerce-Address {
+    background: #f8f9fa !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.woocommerce-account .woocommerce-Address-title h3 {
+    border: none !important;
+    margin-bottom: 10px !important;
+}
+
+.woocommerce-account .woocommerce-Address .edit {
+    color: #d63031 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+.woocommerce-account .woocommerce-Address .edit:hover {
+    text-decoration: underline !important;
+}
+
+/* ----------------------------------------
+   VISUAL CONSISTENCY SYSTEM
+   Unified design language across all elements
+   ---------------------------------------- */
+
+/* Standardize border-radius throughout site */
+.button,
+button,
+input[type="button"],
+input[type="submit"],
+.woocommerce button.button,
+.woocommerce-page button.button,
+.ast-button,
+.wp-block-button__link {
+    border-radius: 6px !important;
+}
+
+/* Large prominent buttons */
+.woocommerce div.product form.cart .single_add_to_cart_button,
+.woocommerce-cart .wc-proceed-to-checkout .checkout-button,
+.woocommerce-checkout #place_order {
+    border-radius: 8px !important;
+}
+
+/* Standardize box-shadows for depth consistency */
+.product,
+.woocommerce ul.products li.product,
+.woocommerce .widget,
+.widget,
+.woocommerce table.shop_table,
+.cart-collaterals .cart_totals,
+.woocommerce-checkout #order_review {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* Elevated elements (more prominent shadow) */
+.woocommerce div.product form.cart .single_add_to_cart_button,
+.woocommerce-cart .wc-proceed-to-checkout .checkout-button,
+.woocommerce-checkout #place_order,
+.trust-badges-container {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Hover state elevate effect (consistent across all interactive elements) */
+.woocommerce ul.products li.product:hover,
+.product:hover,
+.woocommerce button.button:hover,
+.button:hover,
+.woocommerce-account .woocommerce-MyAccount-navigation ul li a:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Standardize focus states for accessibility */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+.button:focus,
+a:focus {
+    outline: 2px solid #d63031 !important;
+    outline-offset: 2px !important;
+}
+
+/* Remove outline for mouse users, keep for keyboard users */
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+button:focus:not(:focus-visible),
+a:focus:not(:focus-visible) {
+    outline: none !important;
+}
+
+/* Transitions - smooth interactions throughout */
+.button,
+button,
+input,
+select,
+textarea,
+a,
+.woocommerce ul.products li.product,
+.woocommerce .widget li,
+.widget li {
+    transition: all 0.3s ease !important;
+}
+
+/* Link hover consistency */
+a:hover {
+    opacity: 0.8 !important;
+}
+
+.woocommerce ul.products li.product a:hover,
+.woocommerce .widget li a:hover,
+.widget li a:hover {
+    opacity: 1 !important;
+    color: #d63031 !important;
+}
+
+/* Border consistency for form elements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+select,
+textarea {
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #d63031 !important;
+}
+
+/* ----------------------------------------
+   STRATEGIC WHITE SPACE
+   Premium presentation with generous spacing
+   ---------------------------------------- */
+
+/* Main content area breathing room */
+.site-content,
+.ast-container {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+}
+
+.woocommerce .content-area,
+.woocommerce-page .content-area {
+    padding: 40px 20px !important;
+}
+
+/* Section spacing */
+.woocommerce .products,
+.woocommerce-checkout .woocommerce,
+.woocommerce-cart .woocommerce,
+.woocommerce-account .woocommerce {
+    margin-bottom: 60px !important;
+}
+
+/* Widget spacing */
+.sidebar .widget,
+.woocommerce .widget,
+.widget {
+    margin-bottom: 40px !important;
+    padding: 25px !important;
+}
+
+/* Product grid spacing (premium feel) */
+.woocommerce ul.products li.product {
+    padding: 20px !important;
+    margin-bottom: 30px !important;
+}
+
+/* Headings spacing */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 1.5em !important;
+    margin-bottom: 0.75em !important;
+}
+
+.entry-title,
+.woocommerce-products-header__title {
+    margin-bottom: 40px !important;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 1.5em !important;
+}
+
+/* List spacing */
+ul, ol {
+    margin-bottom: 1.5em !important;
+}
+
+li {
+    margin-bottom: 0.5em !important;
+}
+
+/* Image spacing */
+img {
+    margin-bottom: 1.5em !important;
+}
+
+.woocommerce ul.products li.product img {
+    margin-bottom: 15px !important;
+}
+
+/* Button spacing */
+.button,
+button,
+input[type="submit"] {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+/* ----------------------------------------
+   FOOTER ENHANCEMENT
+   Professional completion with trust elements
+   ---------------------------------------- */
+
+/* Footer structure */
+.site-footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+    color: #ecf0f1 !important;
+    padding: 60px 20px 30px 20px !important;
+    margin-top: 80px !important;
+    border-top: 4px solid #d63031 !important;
+}
+
+/* Footer widgets */
+.footer-widget-area {
+    max-width: 1200px !important;
+    margin: 0 auto 40px auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 40px !important;
+}
+
+.footer-widget-area .widget {
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 25px !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer-widget-area .widget h2,
+.footer-widget-area .widget h3,
+.footer-widget-area .widget .widget-title {
+    color: #ffffff !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 10px !important;
+    border-bottom: 2px solid #d63031 !important;
+}
+
+.footer-widget-area .widget ul {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.footer-widget-area .widget li {
+    margin-bottom: 10px !important;
+    padding-left: 0 !important;
+}
+
+.footer-widget-area .widget a {
+    color: #ecf0f1 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+}
+
+.footer-widget-area .widget a:hover {
+    color: #d63031 !important;
+    transform: translateX(5px) !important;
+    opacity: 1 !important;
+}
+
+/* Footer navigation */
+.site-footer .footer-navigation {
+    background: rgba(0, 0, 0, 0.2) !important;
+    padding: 20px !important;
+    border-radius: 8px !important;
+    margin-bottom: 30px !important;
+}
+
+.site-footer .footer-navigation ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.site-footer .footer-navigation a {
+    color: #ecf0f1 !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: color 0.3s ease !important;
+}
+
+.site-footer .footer-navigation a:hover {
+    color: #d63031 !important;
+}
+
+/* Copyright section */
+.site-footer .site-info,
+.site-footer p {
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 14px !important;
+    padding-top: 30px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+    margin: 30px auto 0 auto !important;
+    max-width: 1200px !important;
+}
+
+.site-footer .site-info a,
+.site-footer p a {
+    color: #d63031 !important;
+    text-decoration: none !important;
+}
+
+.site-footer .site-info a:hover,
+.site-footer p a:hover {
+    text-decoration: underline !important;
+}
+
+/* Payment icons in footer (when user adds them) */
+.site-footer .payment-icons,
+.site-footer .footer-payment-icons {
+    justify-content: center !important;
+    margin: 30px 0 !important;
+    padding: 20px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-radius: 8px !important;
+}
+
+/* Newsletter signup in footer (when user adds plugin) */
+.site-footer .newsletter-signup,
+.site-footer .mc4wp-form,
+.site-footer .mailchimp-signup {
+    max-width: 500px !important;
+    margin: 0 auto 30px auto !important;
+    padding: 30px !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+.site-footer .newsletter-signup input[type="email"],
+.site-footer .mc4wp-form input[type="email"] {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: none !important;
+    padding: 15px !important;
+    border-radius: 6px !important;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+
+.site-footer .newsletter-signup button,
+.site-footer .newsletter-signup input[type="submit"],
+.site-footer .mc4wp-form button,
+.site-footer .mc4wp-form input[type="submit"] {
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 15px 30px !important;
+    border-radius: 6px !important;
+    font-weight: 700 !important;
+    width: 100% !important;
+    cursor: pointer !important;
+}
+
+.site-footer .newsletter-signup button:hover,
+.site-footer .mc4wp-form button:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%) !important;
+}
+
+/* ----------------------------------------
+   ACCESSIBILITY ENHANCEMENTS
+   WCAG AA compliance + keyboard navigation
+   ---------------------------------------- */
+
+/* Skip to content link (for keyboard navigation) */
+.skip-to-content {
+    position: absolute !important;
+    top: -40px !important;
+    left: 0 !important;
+    background: #d63031 !important;
+    color: #ffffff !important;
+    padding: 10px 20px !important;
+    text-decoration: none !important;
+    z-index: 100000 !important;
+    border-radius: 0 0 6px 0 !important;
+    font-weight: 700 !important;
+}
+
+.skip-to-content:focus {
+    top: 0 !important;
+    outline: 2px solid #ffffff !important;
+    outline-offset: 2px !important;
+}
+
+/* Enhanced focus indicators for keyboard navigation */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #d63031 !important;
+    outline-offset: 3px !important;
+    box-shadow: 0 0 0 5px rgba(214, 48, 49, 0.2) !important;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    * {
+        border-color: currentColor !important;
+    }
+
+    .woocommerce button.button,
+    button,
+    .button {
+        border: 2px solid currentColor !important;
+    }
+}
+
+/* Reduced motion support (accessibility) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Screen reader only text */
+.sr-only,
+.screen-reader-text {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}
+
+.sr-only:focus,
+.screen-reader-text:focus {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 10px 20px !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    background: #d63031 !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    z-index: 100000 !important;
+}
+
+/* ARIA live regions styling */
+[aria-live="polite"],
+[aria-live="assertive"] {
+    position: relative !important;
+    padding: 15px !important;
+    background: #e8f5e9 !important;
+    border-left: 4px solid #27ae60 !important;
+    border-radius: 6px !important;
+    margin: 15px 0 !important;
+}
+
+/* Error messages (high visibility) */
+.woocommerce-error,
+.woocommerce-message,
+.woocommerce-info {
+    padding: 15px 20px !important;
+    border-radius: 6px !important;
+    margin-bottom: 20px !important;
+    font-weight: 600 !important;
+}
+
+.woocommerce-error {
+    background: #fee !important;
+    border-left: 4px solid #d63031 !important;
+    color: #c0392b !important;
+}
+
+.woocommerce-message {
+    background: #e8f5e9 !important;
+    border-left: 4px solid #27ae60 !important;
+    color: #1e8449 !important;
+}
+
+.woocommerce-info {
+    background: #e3f2fd !important;
+    border-left: 4px solid #2196f3 !important;
+    color: #1565c0 !important;
+}
+
+/* Improved color contrast (WCAG AA compliant) */
+.woocommerce .price,
+.woocommerce-Price-amount {
+    color: #2c3e50 !important;
+    font-weight: 700 !important;
+}
+
+.woocommerce .price ins,
+.woocommerce-Price-amount ins {
+    color: #d63031 !important;
+}
+
+/* ----------------------------------------
+   MOBILE RESPONSIVENESS FOR PHASE 4
+   Optimize cart/checkout/footer for mobile
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Cart page mobile */
+    .woocommerce-cart .woocommerce {
+        padding: 20px 15px !important;
+    }
+
+    .woocommerce table.shop_table {
+        font-size: 14px !important;
+    }
+
+    .woocommerce table.shop_table th,
+    .woocommerce table.shop_table td {
+        padding: 10px 8px !important;
+    }
+
+    .woocommerce table.shop_table .product-thumbnail img {
+        max-width: 60px !important;
+    }
+
+    /* Checkout page mobile */
+    .woocommerce-checkout .woocommerce {
+        padding: 20px 15px !important;
+    }
+
+    .woocommerce-checkout .form-row {
+        margin-bottom: 15px !important;
+    }
+
+    /* Footer mobile */
+    .site-footer {
+        padding: 40px 15px 20px 15px !important;
+        margin-top: 40px !important;
+    }
+
+    .footer-widget-area {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+    }
+
+    .site-footer .footer-navigation ul {
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
+    }
+
+    /* White space adjustments for mobile */
+    .site-content,
+    .ast-container {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    .woocommerce .content-area {
+        padding: 20px 15px !important;
+    }
+
+    .sidebar .widget,
+    .widget {
+        margin-bottom: 25px !important;
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Extra small mobile optimizations */
+    .woocommerce-cart .wc-proceed-to-checkout .checkout-button,
+    .woocommerce-checkout #place_order {
+        padding: 16px 20px !important;
+        font-size: 16px !important;
+    }
+
+    .cart-collaterals .cart_totals {
+        padding: 20px !important;
+    }
+
+    .site-footer {
+        padding: 30px 10px 15px 10px !important;
+    }
+}
+
+/* ----------------------------------------
+   END PHASE 4: CONVERSION FUNNEL & POLISH
+   ---------------------------------------- */
