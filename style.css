@@ -17,18 +17,11 @@ Domain Path: /languages
 
 /* ========================================
    Canvas Nest Custom Styles
-   TESTING - If you see a yellow background, CSS is loading!
    ======================================== */
-
-/* TEMPORARY TEST - Remove after confirming CSS loads */
-body {
-    border-top: 5px solid #00ff00 !important; /* Green border at top */
-}
 
 /* ========================================
    PHASE 1: SAFE CSS IMPROVEMENTS
-   Date: December 12, 2025 - Updated
-   Testing deployment webhook
+   Date: December 12, 2025
    ======================================== */
 
 /* ----------------------------------------
