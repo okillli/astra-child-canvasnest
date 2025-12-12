@@ -154,3 +154,459 @@ body {
 /* ----------------------------------------
    END PHASE 1 IMPROVEMENTS
    ---------------------------------------- */
+
+/* ========================================
+   PHASE 2: ADVANCED UI/UX IMPROVEMENTS
+   Date: December 12, 2025
+   ======================================== */
+
+/* ----------------------------------------
+   1. SALE BADGE REDESIGN - CRITICAL
+   ---------------------------------------- */
+
+/* Hide redundant green circular percentage badges */
+.woocommerce ul.products li.product .ast-on-card-button .ast-onsale-card,
+.woocommerce ul.products li.product .astra-shop-thumbnail-wrap .ast-onsale-card,
+.ast-onsale-card {
+    display: none !important; /* Remove cluttered green circles */
+}
+
+/* Enhanced WooCommerce sale badge - single clean indicator */
+.woocommerce span.onsale {
+    /* Positioning */
+    position: absolute !important;
+    top: 12px !important;
+    left: 12px !important;
+    z-index: 10 !important;
+
+    /* Styling - elegant and professional */
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+
+    /* Typography */
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1 !important;
+
+    /* Spacing */
+    padding: 8px 14px !important;
+
+    /* Shape - rounded rectangle */
+    border-radius: 6px !important;
+
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 8px rgba(214, 48, 49, 0.3) !important;
+
+    /* Remove default margins */
+    margin: 0 !important;
+
+    /* Smooth transitions */
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+/* Sale badge hover effect */
+.woocommerce ul.products li.product:hover span.onsale {
+    transform: scale(1.05) !important;
+    box-shadow: 0 4px 12px rgba(214, 48, 49, 0.4) !important;
+}
+
+/* Ensure product cards have relative positioning for absolute badge */
+.woocommerce ul.products li.product {
+    position: relative !important;
+}
+
+/* Ensure image wrapper doesn't hide the badge */
+.woocommerce ul.products li.product .astra-shop-thumbnail-wrap,
+.woocommerce ul.products li.product a img {
+    position: relative !important;
+}
+
+/* ----------------------------------------
+   END SALE BADGE REDESIGN
+   ---------------------------------------- */
+
+/* ----------------------------------------
+   2. MOBILE RESPONSIVENESS - CRITICAL
+   ---------------------------------------- */
+
+/* Tablet and below (768px) */
+@media (max-width: 768px) {
+    /* Reduce grid gaps for smaller screens */
+    .woocommerce ul.products {
+        gap: 20px !important;
+    }
+
+    /* Optimize product card padding */
+    .woocommerce ul.products li.product {
+        padding: 12px !important;
+    }
+
+    /* Adjust sale badge size and position */
+    .woocommerce span.onsale {
+        top: 10px !important;
+        left: 10px !important;
+        font-size: 11px !important;
+        padding: 6px 12px !important;
+    }
+
+    /* Improve product title readability */
+    .woocommerce ul.products li.product h2,
+    .woocommerce ul.products li.product .woocommerce-loop-product__title {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* Optimize pricing for mobile */
+    .woocommerce ul.products li.product .price {
+        font-size: 16px !important;
+    }
+
+    /* Header spacing reduction */
+    .site-header {
+        margin-bottom: 15px !important;
+    }
+
+    /* Promotional banner optimization */
+    .header-widget-region {
+        padding: 10px 15px !important;
+    }
+
+    .header-widget-region h6 {
+        font-size: 14px !important;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    /* Tighter grid for small screens */
+    .woocommerce ul.products {
+        gap: 16px !important;
+    }
+
+    /* Optimize card padding for mobile */
+    .woocommerce ul.products li.product {
+        padding: 10px !important;
+    }
+
+    /* Smaller sale badge on mobile */
+    .woocommerce span.onsale {
+        top: 8px !important;
+        left: 8px !important;
+        font-size: 10px !important;
+        padding: 5px 10px !important;
+        border-radius: 4px !important;
+    }
+
+    /* Product titles - smaller but readable */
+    .woocommerce ul.products li.product h2,
+    .woocommerce ul.products li.product .woocommerce-loop-product__title {
+        font-size: 14px !important;
+        line-height: 1.3 !important;
+    }
+
+    /* Pricing adjustment */
+    .woocommerce ul.products li.product .price {
+        font-size: 15px !important;
+    }
+
+    /* Page title optimization */
+    .woocommerce-products-header h1,
+    .woocommerce h1.page-title {
+        font-size: 24px !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* Reduce hover lift on mobile (prevents awkward touch interactions) */
+    .woocommerce ul.products li.product:hover {
+        transform: none !important;
+    }
+}
+
+/* Increase touch target sizes for better mobile UX */
+@media (max-width: 768px) {
+    /* Ensure clickable product areas are adequately sized */
+    .woocommerce ul.products li.product a {
+        min-height: 44px !important; /* iOS recommended minimum */
+        display: block !important;
+    }
+
+    /* Add to cart button - larger touch target */
+    .woocommerce ul.products li.product .button {
+        padding: 12px 20px !important;
+        font-size: 14px !important;
+        min-height: 44px !important;
+    }
+}
+
+/* ----------------------------------------
+   END MOBILE RESPONSIVENESS
+   ---------------------------------------- */
+
+/* ----------------------------------------
+   3. TYPOGRAPHY SYSTEM - CONSISTENCY
+   ---------------------------------------- */
+
+/* Base typography scale and standards */
+body {
+    font-size: 16px !important; /* Base size */
+    line-height: 1.6 !important; /* Comfortable reading */
+    color: #2c3e50 !important; /* WCAG AA compliant */
+}
+
+/* Heading hierarchy with consistent scale */
+h1, .h1 {
+    font-size: 32px !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 20px !important;
+}
+
+h2, .h2 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 16px !important;
+}
+
+h3, .h3 {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 14px !important;
+}
+
+h4, .h4 {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 12px !important;
+}
+
+h5, h6, .h5, .h6 {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Paragraph spacing and readability */
+p {
+    margin-bottom: 16px !important;
+    line-height: 1.6 !important;
+}
+
+/* Small text (legal, meta, etc.) */
+small, .small-text {
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    color: #666 !important;
+}
+
+/* Very small text (copyright, fine print) */
+.tiny-text {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    color: #999 !important;
+}
+
+/* Link styling for better UX */
+a {
+    color: #2c3e50 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+a:hover {
+    color: #d63031 !important;
+    text-decoration: none !important;
+}
+
+/* Ensure proper contrast for accessibility (WCAG AA) */
+.woocommerce .woocommerce-result-count,
+.woocommerce-info,
+.woocommerce-message {
+    color: #2c3e50 !important; /* Minimum 4.5:1 contrast ratio */
+}
+
+/* Button typography */
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce #respond input#submit {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    text-transform: none !important; /* More approachable than all-caps */
+}
+
+/* ----------------------------------------
+   END TYPOGRAPHY SYSTEM
+   ---------------------------------------- */
+
+/* ----------------------------------------
+   4. PRODUCT PAGE IMPROVEMENTS
+   ---------------------------------------- */
+
+/* Size/variation dropdown styling */
+.woocommerce div.product form.cart .variations select,
+.woocommerce div.product form.cart select {
+    padding: 12px 16px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    background-color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #2c3e50 !important;
+    transition: border-color 0.2s ease !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.woocommerce div.product form.cart .variations select:hover,
+.woocommerce div.product form.cart select:hover {
+    border-color: #d63031 !important;
+}
+
+.woocommerce div.product form.cart .variations select:focus,
+.woocommerce div.product form.cart select:focus {
+    border-color: #d63031 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(214, 48, 49, 0.1) !important;
+}
+
+/* Quantity input styling */
+.woocommerce div.product form.cart .quantity input.qty,
+.woocommerce .quantity input.qty {
+    padding: 12px 16px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    text-align: center !important;
+    width: 80px !important;
+    transition: border-color 0.2s ease !important;
+}
+
+.woocommerce div.product form.cart .quantity input.qty:focus,
+.woocommerce .quantity input.qty:focus {
+    border-color: #d63031 !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(214, 48, 49, 0.1) !important;
+}
+
+/* Enhanced "Add to Basket" button - make it prominent */
+.woocommerce div.product form.cart .single_add_to_cart_button,
+.woocommerce div.product form.cart button.button {
+    /* Size and spacing */
+    padding: 16px 32px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    min-height: 56px !important;
+    width: auto !important;
+
+    /* Styling */
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+
+    /* Effects */
+    box-shadow: 0 4px 16px rgba(214, 48, 49, 0.3) !important;
+    transition: all 0.3s ease !important;
+
+    /* Typography */
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.woocommerce div.product form.cart .single_add_to_cart_button:hover,
+.woocommerce div.product form.cart button.button:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%) !important;
+    box-shadow: 0 6px 20px rgba(214, 48, 49, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Product tag organization - limit visual clutter */
+.woocommerce div.product .product_meta {
+    margin-top: 24px !important;
+    padding-top: 24px !important;
+    border-top: 1px solid #e0e0e0 !important;
+}
+
+.woocommerce div.product .product_meta > span {
+    display: block !important;
+    margin-bottom: 8px !important;
+    font-size: 14px !important;
+    color: #666 !important;
+}
+
+.woocommerce div.product .product_meta a {
+    color: #2c3e50 !important;
+    font-weight: 500 !important;
+    transition: color 0.2s ease !important;
+}
+
+.woocommerce div.product .product_meta a:hover {
+    color: #d63031 !important;
+}
+
+/* Product tabs styling */
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+    border-bottom: 2px solid #e0e0e0 !important;
+    margin-bottom: 24px !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li {
+    border: none !important;
+    background: transparent !important;
+    margin-right: 16px !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+    padding: 12px 20px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #666 !important;
+    transition: color 0.2s ease !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a,
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+    color: #d63031 !important;
+    border-bottom: 2px solid #d63031 !important;
+}
+
+/* Product price on single page - make prominent */
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 20px !important;
+}
+
+/* Sale price styling on product page */
+.woocommerce div.product p.price del,
+.woocommerce div.product span.price del {
+    color: #999 !important;
+    font-size: 22px !important;
+    opacity: 0.7 !important;
+}
+
+.woocommerce div.product p.price ins,
+.woocommerce div.product span.price ins {
+    text-decoration: none !important;
+    color: #d63031 !important;
+}
+
+/* ----------------------------------------
+   END PRODUCT PAGE IMPROVEMENTS
+   ---------------------------------------- */
