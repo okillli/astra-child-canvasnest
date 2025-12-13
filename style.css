@@ -2823,3 +2823,353 @@ textarea:focus-visible {
 /* ----------------------------------------
    END PHASE 5: ASTRA PRO INTEGRATION
    ---------------------------------------- */
+
+/* ========================================
+   PHASE 5B: UX AUDIT FIXES
+   Date: December 13, 2025
+   Focus: Product tags as badges, variation text handling, additional polish
+   ======================================== */
+
+/* ----------------------------------------
+   1. PRODUCT TAGS - BADGE STYLING
+   ---------------------------------------- */
+
+/* Convert comma-separated tags to visual badge elements */
+.woocommerce div.product .tagged_as {
+    display: block !important;
+    margin-top: 20px !important;
+}
+
+.woocommerce div.product .tagged_as a {
+    display: inline-block !important;
+    background: #f8f9fa !important;
+    color: #2c3e50 !important;
+    padding: 6px 12px !important;
+    margin: 0 8px 8px 0 !important;
+    border-radius: 16px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    border: 1px solid #e0e0e0 !important;
+    transition: all 0.2s ease !important;
+}
+
+.woocommerce div.product .tagged_as a:hover {
+    background: #d63031 !important;
+    color: #ffffff !important;
+    border-color: #d63031 !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Limit tag display - show only first 8, rest can be toggled */
+.woocommerce div.product .tagged_as a:nth-child(n+10) {
+    display: none !important;
+}
+
+/* Add "show more" indicator after 8th tag (CSS only approximation) */
+.woocommerce div.product .tagged_as::after {
+    content: '' !important;
+    display: inline-block !important;
+}
+
+/* ----------------------------------------
+   2. PRODUCT VARIATION TEXT - BETTER HANDLING
+   ---------------------------------------- */
+
+/* Make variation selection buttons more compact */
+.woocommerce div.product form.cart .variations select,
+.woocommerce div.product form.cart .variations .value select {
+    max-width: 100% !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    padding: 10px 35px 10px 12px !important;
+}
+
+/* If using button-style variations, make text wrap better */
+.variations_form .variations .value button,
+.variations_form .variations .value label {
+    max-width: 100% !important;
+    white-space: normal !important;
+    line-height: 1.3 !important;
+    text-align: left !important;
+    padding: 10px 12px !important;
+}
+
+/* Truncate very long variation text on mobile */
+@media (max-width: 768px) {
+    .variations_form .variations .value button,
+    .variations_form .variations .value label,
+    .woocommerce div.product form.cart .variations select option {
+        font-size: 13px !important;
+        line-height: 1.3 !important;
+    }
+}
+
+/* ----------------------------------------
+   3. CATEGORY/TAG METADATA SECTION - POLISH
+   ---------------------------------------- */
+
+/* Better spacing for categories and tags section */
+.woocommerce div.product .product_meta .posted_in,
+.woocommerce div.product .product_meta .tagged_as {
+    margin-bottom: 16px !important;
+    line-height: 1.8 !important;
+}
+
+/* Category links as subtle badges */
+.woocommerce div.product .product_meta .posted_in a {
+    display: inline-block !important;
+    background: #ffffff !important;
+    color: #2c3e50 !important;
+    padding: 4px 10px !important;
+    margin: 0 6px 6px 0 !important;
+    border-radius: 12px !important;
+    font-size: 13px !important;
+    border: 1px solid #d63031 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.woocommerce div.product .product_meta .posted_in a:hover {
+    background: #d63031 !important;
+    color: #ffffff !important;
+}
+
+/* ----------------------------------------
+   4. IMPROVED LOADING STATES
+   ---------------------------------------- */
+
+/* Better loading indicator for AJAX cart */
+.woocommerce .blockUI.blockOverlay {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(2px) !important;
+}
+
+.woocommerce .blockUI.blockOverlay::before {
+    content: 'Loading...' !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    background: #2c3e50 !important;
+    color: #ffffff !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ----------------------------------------
+   5. QUANTITY SELECTOR ENHANCEMENT
+   ---------------------------------------- */
+
+/* Better styled quantity input */
+.woocommerce div.product form.cart div.quantity {
+    margin: 0 10px 20px 0 !important;
+}
+
+.woocommerce div.product form.cart div.quantity input.qty {
+    width: 70px !important;
+    padding: 12px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    transition: border-color 0.2s ease !important;
+}
+
+.woocommerce div.product form.cart div.quantity input.qty:focus {
+    border-color: #d63031 !important;
+    outline: none !important;
+}
+
+/* Quantity +/- buttons if theme supports */
+.woocommerce div.product form.cart div.quantity .qty-button,
+.woocommerce div.product form.cart div.quantity button {
+    min-width: 40px !important;
+    min-height: 40px !important;
+    background: #f8f9fa !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    color: #2c3e50 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+.woocommerce div.product form.cart div.quantity .qty-button:hover,
+.woocommerce div.product form.cart div.quantity button:hover {
+    background: #d63031 !important;
+    border-color: #d63031 !important;
+    color: #ffffff !important;
+}
+
+/* ----------------------------------------
+   6. BREADCRUMB POLISH
+   ---------------------------------------- */
+
+/* Better breadcrumb styling */
+.woocommerce-breadcrumb,
+.woocommerce .woocommerce-breadcrumb {
+    font-size: 14px !important;
+    color: #666 !important;
+    margin-bottom: 20px !important;
+    padding: 12px 0 !important;
+}
+
+.woocommerce-breadcrumb a {
+    color: #2c3e50 !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.woocommerce-breadcrumb a:hover {
+    color: #d63031 !important;
+}
+
+/* ----------------------------------------
+   7. RELATED PRODUCTS SECTION
+   ---------------------------------------- */
+
+/* Related products heading */
+.woocommerce .related.products > h2,
+.woocommerce .upsells.products > h2 {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 30px !important;
+    padding-bottom: 15px !important;
+    border-bottom: 2px solid #d63031 !important;
+}
+
+/* Related products use same card styling as shop page */
+.woocommerce .related.products ul.products,
+.woocommerce .upsells.products ul.products {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) !important;
+    gap: 30px !important;
+}
+
+/* ----------------------------------------
+   8. SHOP PAGE - RESULT COUNT & ORDERING
+   ---------------------------------------- */
+
+/* Better styling for result count and ordering bar */
+.woocommerce-result-count {
+    font-size: 14px !important;
+    color: #666 !important;
+    margin: 0 !important;
+}
+
+.woocommerce-ordering select {
+    padding: 10px 35px 10px 12px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    background-color: #ffffff !important;
+    transition: border-color 0.2s ease !important;
+}
+
+.woocommerce-ordering select:focus {
+    border-color: #d63031 !important;
+    outline: none !important;
+}
+
+/* ----------------------------------------
+   9. PRODUCT IMAGE GALLERY ENHANCEMENT
+   ---------------------------------------- */
+
+/* Product image thumbnails */
+.woocommerce div.product div.images .flex-control-thumbs {
+    display: flex !important;
+    gap: 12px !important;
+    margin-top: 20px !important;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li {
+    flex: 0 0 auto !important;
+    width: 80px !important;
+    margin: 0 !important;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li img {
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    opacity: 0.6 !important;
+}
+
+.woocommerce div.product div.images .flex-control-thumbs li img:hover,
+.woocommerce div.product div.images .flex-control-thumbs li img.flex-active {
+    border-color: #d63031 !important;
+    opacity: 1 !important;
+}
+
+/* Main product image container */
+.woocommerce div.product div.images img {
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ----------------------------------------
+   10. MOBILE-SPECIFIC POLISH
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Tags: Smaller on mobile */
+    .woocommerce div.product .tagged_as a {
+        font-size: 12px !important;
+        padding: 5px 10px !important;
+        margin: 0 6px 6px 0 !important;
+    }
+
+    /* Category badges: Smaller on mobile */
+    .woocommerce div.product .product_meta .posted_in a {
+        font-size: 12px !important;
+        padding: 3px 8px !important;
+    }
+
+    /* Breadcrumbs: Smaller text */
+    .woocommerce-breadcrumb {
+        font-size: 12px !important;
+        padding: 10px 0 !important;
+    }
+
+    /* Related products: 2 columns on tablet */
+    .woocommerce .related.products ul.products,
+    .woocommerce .upsells.products ul.products {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    /* Product image thumbnails: Smaller */
+    .woocommerce div.product div.images .flex-control-thumbs li {
+        width: 60px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Tags: Limit display on very small screens */
+    .woocommerce div.product .tagged_as a:nth-child(n+6) {
+        display: none !important;
+    }
+
+    /* Related products: Single column on mobile */
+    .woocommerce .related.products ul.products,
+    .woocommerce .upsells.products ul.products {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Product meta: Stack on mobile */
+    .woocommerce div.product .product_meta > span {
+        margin-bottom: 12px !important;
+    }
+}
+
+/* ----------------------------------------
+   END PHASE 5B: UX AUDIT FIXES
+   ---------------------------------------- */
