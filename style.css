@@ -2259,3 +2259,567 @@ textarea:focus-visible {
 /* ----------------------------------------
    END PHASE 4: CONVERSION FUNNEL & POLISH
    ---------------------------------------- */
+
+/* ========================================
+   PHASE 5: ASTRA PRO INTEGRATION & SHOP PAGE POLISH
+   Date: December 13, 2025
+   Focus: Shop page optimization, Sticky Add to Cart styling, mobile enhancements
+   ======================================== */
+
+/* ----------------------------------------
+   1. SHOP PAGE - ENHANCED PRODUCT CARDS
+   ---------------------------------------- */
+
+/* Select options button styling - match main CTA design */
+.woocommerce ul.products li.product .button,
+.woocommerce ul.products li.product .add_to_cart_button,
+.woocommerce ul.products li.product .product_type_variable {
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 2px 8px rgba(214, 48, 49, 0.2) !important;
+    display: inline-block !important;
+    text-decoration: none !important;
+    margin-top: 10px !important;
+}
+
+.woocommerce ul.products li.product .button:hover,
+.woocommerce ul.products li.product .add_to_cart_button:hover,
+.woocommerce ul.products li.product .product_type_variable:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(214, 48, 49, 0.3) !important;
+}
+
+/* Product card image area enhancement */
+.woocommerce ul.products li.product .woocommerce-loop-product__link {
+    display: block !important;
+    position: relative !important;
+    overflow: hidden !important;
+    border-radius: 6px !important;
+    margin-bottom: 12px !important;
+}
+
+.woocommerce ul.products li.product img {
+    transition: transform 0.4s ease !important;
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__link:hover img {
+    transform: scale(1.05) !important;
+}
+
+/* Product price enhancement on cards */
+.woocommerce ul.products li.product .price {
+    margin: 12px 0 !important;
+    display: block !important;
+}
+
+.woocommerce ul.products li.product .price del {
+    opacity: 0.6 !important;
+    font-size: 16px !important;
+    margin-right: 8px !important;
+}
+
+.woocommerce ul.products li.product .price ins {
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    color: #d63031 !important;
+}
+
+/* Product title spacing */
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    margin: 8px 0 !important;
+    line-height: 1.4 !important;
+    min-height: 44px !important; /* Ensure consistent card heights */
+}
+
+/* ----------------------------------------
+   2. SHOP PAGE - SIDEBAR OPTIMIZATION
+   ---------------------------------------- */
+
+/* Better sidebar widget spacing */
+.widget-area .widget {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 8px !important;
+    padding: 25px !important;
+    margin-bottom: 30px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04) !important;
+}
+
+.widget-area .widget-title,
+.widget-area .widget h4 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 20px !important;
+    padding-bottom: 12px !important;
+    border-bottom: 2px solid #d63031 !important;
+}
+
+/* Category list enhancement */
+.widget_product_categories ul,
+.widget_categories ul {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 0 !important;
+}
+
+.widget_product_categories ul li,
+.widget_categories ul li {
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #f0f0f0 !important;
+    transition: padding-left 0.2s ease !important;
+}
+
+.widget_product_categories ul li:last-child,
+.widget_categories ul li:last-child {
+    border-bottom: none !important;
+}
+
+.widget_product_categories ul li a,
+.widget_categories ul li a {
+    color: #2c3e50 !important;
+    text-decoration: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    transition: color 0.2s ease !important;
+}
+
+.widget_product_categories ul li:hover,
+.widget_categories ul li:hover {
+    padding-left: 8px !important;
+}
+
+.widget_product_categories ul li a:hover,
+.widget_categories ul li a:hover {
+    color: #d63031 !important;
+}
+
+/* Product count badge */
+.widget_product_categories .count,
+.widget_categories .count {
+    background: #f8f9fa !important;
+    color: #6c757d !important;
+    padding: 2px 8px !important;
+    border-radius: 12px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+/* Price filter widget */
+.widget_price_filter .price_slider {
+    margin-bottom: 20px !important;
+}
+
+.widget_price_filter .price_slider_amount {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 10px !important;
+}
+
+.widget_price_filter .price_slider_amount input[type="text"] {
+    width: 80px !important;
+    padding: 8px 12px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    text-align: center !important;
+}
+
+.widget_price_filter .price_slider_amount button {
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.widget_price_filter .price_slider_amount button:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Search widget enhancement */
+.widget_search .search-form {
+    position: relative !important;
+}
+
+.widget_search .search-form input[type="search"] {
+    width: 100% !important;
+    padding: 12px 45px 12px 15px !important;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 6px !important;
+    font-size: 14px !important;
+    transition: border-color 0.2s ease !important;
+}
+
+.widget_search .search-form input[type="search"]:focus {
+    border-color: #d63031 !important;
+    outline: none !important;
+}
+
+.widget_search .search-form button {
+    position: absolute !important;
+    right: 5px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+    border: none !important;
+    color: #d63031 !important;
+    cursor: pointer !important;
+    padding: 8px !important;
+}
+
+/* ----------------------------------------
+   3. STICKY ADD TO CART BAR (Astra Pro)
+   ---------------------------------------- */
+
+/* Style the sticky add to cart bar to match Phase 4 design */
+.ast-sticky-add-to-cart {
+    background: #ffffff !important;
+    border-top: 3px solid #d63031 !important;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1) !important;
+    padding: 15px 0 !important;
+    z-index: 999 !important;
+}
+
+.ast-sticky-add-to-cart .ast-sticky-add-to-cart-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 20px !important;
+}
+
+/* Product info section */
+.ast-sticky-add-to-cart .ast-sticky-add-to-cart-title {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    color: #2c3e50 !important;
+    margin: 0 !important;
+}
+
+.ast-sticky-add-to-cart .ast-sticky-add-to-cart-price {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #d63031 !important;
+    margin: 0 10px !important;
+}
+
+/* Sticky add to cart button */
+.ast-sticky-add-to-cart .ast-sticky-add-to-cart-action .button,
+.ast-sticky-add-to-cart .single_add_to_cart_button {
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 14px 32px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    box-shadow: 0 2px 8px rgba(214, 48, 49, 0.2) !important;
+}
+
+.ast-sticky-add-to-cart .ast-sticky-add-to-cart-action .button:hover,
+.ast-sticky-add-to-cart .single_add_to_cart_button:hover {
+    background: linear-gradient(135deg, #c0392b 0%, #a93226 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(214, 48, 49, 0.3) !important;
+}
+
+/* Product thumbnail in sticky bar */
+.ast-sticky-add-to-cart img {
+    width: 60px !important;
+    height: 60px !important;
+    object-fit: cover !important;
+    border-radius: 6px !important;
+    margin-right: 15px !important;
+}
+
+/* ----------------------------------------
+   4. QUICK VIEW POPUP (Astra Pro - Ready when enabled)
+   ---------------------------------------- */
+
+/* Note: Quick View CSS ready but feature needs to be enabled in Customizer */
+.ast-quick-view-modal {
+    max-width: 900px !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+.ast-quick-view-content {
+    padding: 30px !important;
+}
+
+.ast-quick-view-content .product-title {
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin-bottom: 15px !important;
+}
+
+.ast-quick-view-content .price {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    color: #d63031 !important;
+    margin-bottom: 20px !important;
+}
+
+.ast-quick-view-content .single_add_to_cart_button {
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 16px 40px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.ast-quick-view-close {
+    background: #ffffff !important;
+    border: none !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
+    transition: all 0.2s ease !important;
+}
+
+.ast-quick-view-close:hover {
+    background: #f8f9fa !important;
+    transform: rotate(90deg) !important;
+}
+
+/* ----------------------------------------
+   5. OFF-CANVAS CART (Astra Pro - Ready when enabled)
+   ---------------------------------------- */
+
+/* Note: Off-Canvas Cart CSS ready but feature needs to be enabled in Customizer */
+.astra-cart-drawer {
+    width: 400px !important;
+    background: #ffffff !important;
+    box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.astra-cart-drawer-header {
+    padding: 20px !important;
+    border-bottom: 2px solid #d63031 !important;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%) !important;
+}
+
+.astra-cart-drawer-title {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+}
+
+.astra-cart-drawer-close {
+    background: transparent !important;
+    border: none !important;
+    color: #ffffff !important;
+    font-size: 24px !important;
+    cursor: pointer !important;
+    padding: 5px !important;
+    transition: transform 0.2s ease !important;
+}
+
+.astra-cart-drawer-close:hover {
+    transform: rotate(90deg) !important;
+}
+
+.astra-cart-drawer-content {
+    padding: 20px !important;
+    max-height: calc(100vh - 200px) !important;
+    overflow-y: auto !important;
+}
+
+.astra-cart-drawer-footer {
+    padding: 20px !important;
+    border-top: 1px solid #e0e0e0 !important;
+    background: #f8f9fa !important;
+}
+
+.astra-cart-drawer-footer .button {
+    width: 100% !important;
+    background: linear-gradient(135deg, #d63031 0%, #c0392b 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 16px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    border-radius: 6px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 10px !important;
+}
+
+/* ----------------------------------------
+   6. SHOP PAGE - MOBILE OPTIMIZATIONS
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Hide sidebar on mobile, show only main content */
+    .ast-separate-container .ast-article-single,
+    .ast-separate-container .ast-article-post {
+        max-width: 100% !important;
+    }
+
+    /* Sidebar: Move below content on mobile */
+    .sidebar {
+        margin-top: 40px !important;
+    }
+
+    /* Product grid: 2 columns on mobile */
+    .woocommerce ul.products {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
+    }
+
+    .woocommerce ul.products li.product {
+        padding: 10px !important;
+    }
+
+    /* Product card button: Smaller on mobile */
+    .woocommerce ul.products li.product .button {
+        padding: 10px 16px !important;
+        font-size: 12px !important;
+    }
+
+    /* Product title: Smaller min-height on mobile */
+    .woocommerce ul.products li.product .woocommerce-loop-product__title {
+        font-size: 14px !important;
+        min-height: 38px !important;
+    }
+
+    /* Product price: Smaller on mobile */
+    .woocommerce ul.products li.product .price {
+        font-size: 16px !important;
+    }
+
+    /* Sticky add to cart: Optimize for mobile */
+    .ast-sticky-add-to-cart .ast-sticky-add-to-cart-content {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .ast-sticky-add-to-cart .ast-sticky-add-to-cart-title {
+        font-size: 14px !important;
+        margin-bottom: 10px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .ast-sticky-add-to-cart .ast-sticky-add-to-cart-action {
+        width: 100% !important;
+    }
+
+    .ast-sticky-add-to-cart .single_add_to_cart_button {
+        width: 100% !important;
+        padding: 14px 20px !important;
+        font-size: 14px !important;
+    }
+
+    /* Widget area: Full width on mobile */
+    .widget-area .widget {
+        padding: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Product grid: Single column on very small screens */
+    .woocommerce ul.products {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+
+    .woocommerce ul.products li.product {
+        padding: 15px !important;
+    }
+
+    /* Larger product images on single column */
+    .woocommerce ul.products li.product img {
+        max-height: 300px !important;
+        object-fit: cover !important;
+    }
+
+    /* Off-canvas cart: Narrower on small screens */
+    .astra-cart-drawer {
+        width: 90% !important;
+        max-width: 350px !important;
+    }
+}
+
+/* ----------------------------------------
+   7. TOUCH TARGET ENHANCEMENTS
+   ---------------------------------------- */
+
+/* Ensure all interactive elements meet 44px minimum touch target (WCAG) */
+.woocommerce ul.products li.product .button,
+.woocommerce ul.products li.product a {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Product card: Entire card is tappable on mobile */
+@media (max-width: 768px) {
+    .woocommerce ul.products li.product {
+        cursor: pointer !important;
+        -webkit-tap-highlight-color: rgba(214, 48, 49, 0.1) !important;
+    }
+}
+
+/* ----------------------------------------
+   8. LOADING STATE POLISH
+   ---------------------------------------- */
+
+/* Skeleton loading state for products */
+.woocommerce ul.products li.product.loading {
+    opacity: 0.6 !important;
+    pointer-events: none !important;
+}
+
+.woocommerce ul.products li.product.loading::after {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent) !important;
+    animation: shimmer 1.5s infinite !important;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ----------------------------------------
+   END PHASE 5: ASTRA PRO INTEGRATION
+   ---------------------------------------- */
