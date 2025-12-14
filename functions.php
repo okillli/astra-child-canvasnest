@@ -31,47 +31,31 @@ add_action( 'wp_enqueue_scripts', 'astra_child_enqueue_styles', 15 );
  */
 
 /**
- * Force product search results to use WooCommerce product grid layout
+ * Fix product search to use Advanced WooCommerce Search (AWS) plugin
  * Issue #4 from UX Audit: Search results showing blog-style excerpts instead of product grid
- * This hooks into WordPress search and redirects product searches to use the shop template
+ *
+ * The site uses AWS plugin for product search indexing. Vanilla WordPress search
+ * doesn't index WooCommerce products by default, so we redirect to AWS plugin search.
  */
-function canvasnest_fix_product_search_layout( $query ) {
-    // Only affect main query on search pages, not admin or other queries
-    if ( ! is_admin() && $query->is_main_query() && $query->is_search() ) {
-        // Check if we're searching for products specifically
-        // WooCommerce adds 'product' post type to search by default when products exist
-        if ( ! isset( $query->query_vars['post_type'] ) || $query->query_vars['post_type'] == '' ) {
-            // Force search to only show products (not blog posts)
-            $query->set( 'post_type', 'product' );
+function canvasnest_redirect_to_aws_product_search() {
+    // Only redirect on search pages, not admin
+    if ( ! is_admin() && is_search() ) {
+        // Check if this is already an AWS search (has type_aws parameter)
+        if ( ! isset( $_GET['type_aws'] ) ) {
+            // Get the search term
+            $search_term = get_search_query();
+
+            // Only redirect if there's a search term
+            if ( ! empty( $search_term ) ) {
+                // Redirect to AWS plugin search with product post type
+                $redirect_url = home_url( '/?s=' . urlencode( $search_term ) . '&post_type=product&type_aws=true' );
+                wp_redirect( $redirect_url, 301 );
+                exit;
+            }
         }
     }
 }
-add_action( 'pre_get_posts', 'canvasnest_fix_product_search_layout' );
-
-/**
- * Use WooCommerce shop template for product search results
- * This ensures product searches display in grid format, not blog excerpt format
- */
-function canvasnest_use_shop_template_for_search( $template ) {
-    global $wp_query;
-
-    // If this is a search page AND we're showing products
-    if ( is_search() && isset( $wp_query->query_vars['post_type'] ) && $wp_query->query_vars['post_type'] == 'product' ) {
-        // Check if WooCommerce shop template exists
-        $shop_template = locate_template( 'woocommerce/archive-product.php' );
-        if ( ! $shop_template ) {
-            // Fallback to WooCommerce plugin template
-            $shop_template = WC()->plugin_path() . '/templates/archive-product.php';
-        }
-
-        if ( file_exists( $shop_template ) ) {
-            return $shop_template;
-        }
-    }
-
-    return $template;
-}
-add_filter( 'template_include', 'canvasnest_use_shop_template_for_search', 99 );
+add_action( 'template_redirect', 'canvasnest_redirect_to_aws_product_search', 1 );
 
 // Example WooCommerce hook placeholder
 // add_filter( 'woocommerce_product_loop_columns', function( $columns ) {
