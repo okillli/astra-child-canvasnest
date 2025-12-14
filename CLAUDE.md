@@ -244,10 +244,9 @@ git add . && git commit -m "message" && git push origin main
 - Product tags as badges, category styling, loading states, image gallery polish
 
 ### What Needs Manual Action:
-- 📸 Upload trust badges to WordPress - **FILES READY IN `/trust-badges-ready-to-upload/`** ⭐ NEW
-  - Payment icons: Visa, Mastercard, PayPal, Apple Pay, Google Pay (downloaded)
-  - Trust badges: SSL Secure, Money Back, Secure Checkout (custom designed)
-  - See: `UPLOAD-INSTRUCTIONS.txt` for 20-min setup guide
+- 📸 Trust badges - **DEFERRED** (caused CSS conflicts, see `trust-badges-DEFERRED.md`)
+  - Files ready but need different implementation approach
+  - Can revisit later with staging site or developer
 - 📧 Add newsletter signup to footer
 - 🔗 Add social media links
 - 📝 Shorten variation text: "Small: 45.72cm..." → "Small (18"×12")"
