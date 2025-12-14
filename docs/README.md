@@ -31,6 +31,8 @@ Step-by-step guides for implementing features and understanding the codebase.
 ### `/research` - Research & Analysis
 Research findings, decision-making documentation, and strategic analysis.
 
+- **WOOCOMMERCE-THEME-RESEARCH-2025.md** ⭐ **NEW** - Comprehensive theme analysis (14 pages, 7 themes reviewed)
+- **THEME-DECISION-SUMMARY.md** - Quick theme decision guide with action plan
 - **RESEARCH-SALE-BADGE-STRATEGY.md** - E-commerce conversion research (7+ studies)
 - **SOLUTION-SALE-BADGES.md** - Root cause analysis of badge issues
 - **WORDPRESS-FRONTEND-STRATEGY.md** - Frontend architecture decisions
