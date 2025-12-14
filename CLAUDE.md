@@ -244,8 +244,10 @@ git add . && git commit -m "message" && git push origin main
 - Product tags as badges, category styling, loading states, image gallery polish
 
 ### What Needs Manual Action:
-- 📸 Upload payment method icons (Visa, Mastercard, PayPal, etc.) - **FREE RESOURCES GUIDE READY**
-- 📸 Upload security badges (SSL, guarantee) - **FREE RESOURCES GUIDE READY**
+- 📸 Upload trust badges to WordPress - **FILES READY IN `/trust-badges-ready-to-upload/`** ⭐ NEW
+  - Payment icons: Visa, Mastercard, PayPal, Apple Pay, Google Pay (downloaded)
+  - Trust badges: SSL Secure, Money Back, Secure Checkout (custom designed)
+  - See: `UPLOAD-INSTRUCTIONS.txt` for 20-min setup guide
 - 📧 Add newsletter signup to footer
 - 🔗 Add social media links
 - 📝 Shorten variation text: "Small: 45.72cm..." → "Small (18"×12")"
@@ -284,12 +286,12 @@ See [docs/README.md](docs/README.md) for complete documentation index.
 
 ## 🚀 NEXT STEPS FOR USER
 
-**Trust Badges (30 min) - FREE RESOURCES READY:**
-- Download payment icons from datatrans GitHub or SVG Repo
-- Download SSL/security badges from UXWing (no attribution required)
-- Upload to `/wp-content/uploads/trust-badges/`
-- Add HTML to footer widget (code provided in guide)
-- **Guide:** [TRUST-BADGES-FREE-RESOURCES.md](docs/guides/TRUST-BADGES-FREE-RESOURCES.md)
+**Trust Badges (20 min) - FILES READY TO UPLOAD:** ⭐ NEW
+- All 8 SVG files downloaded and ready in `/trust-badges-ready-to-upload/`
+- Upload folder to WordPress: `/wp-content/uploads/trust-badges/`
+- Add HTML to footer widget (code in README.md)
+- **Quick Start:** `trust-badges-ready-to-upload/UPLOAD-INSTRUCTIONS.txt`
+- **Full Guide:** [TRUST-BADGES-FREE-RESOURCES.md](docs/guides/TRUST-BADGES-FREE-RESOURCES.md)
 
 **Content Optimization (1 hour):**
 - Shorten product variation text in WordPress admin
