@@ -2310,9 +2310,11 @@ textarea:focus-visible {
 
 .woocommerce ul.products li.product img {
     transition: transform 0.4s ease !important;
-    width: 100% !important;
+    max-width: 100% !important;
+    width: auto !important;
     height: auto !important;
     display: block !important;
+    margin: 0 auto !important; /* Center image if smaller than container */
 }
 
 .woocommerce ul.products li.product .woocommerce-loop-product__link:hover img {
