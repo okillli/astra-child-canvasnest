@@ -1,0 +1,11 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="55" fill="#27ae60"/>
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#1e8449" stroke-width="3"/>
+
+  <!-- Star icon -->
+  <path d="M60 35L67 52H85L71 62L77 79L60 68L43 79L49 62L35 52H53L60 35Z" fill="#f1c40f" stroke="#f39c12" stroke-width="2"/>
+
+  <!-- Text -->
+  <text x="60" y="98" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">30-DAY</text>
+  <text x="60" y="109" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle">MONEY BACK</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="55" fill="#27ae60"/>
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#1e8449" stroke-width="3"/>
+
+  <!-- Lock icon -->
+  <path d="M60 35C53 35 47 41 47 48V56H43C41 56 39 58 39 60V82C39 84 41 86 43 86H77C79 86 81 84 81 82V60C81 58 79 56 77 56H73V48C73 41 67 35 60 35ZM60 41C64 41 67 44 67 48V56H53V48C53 44 56 41 60 41ZM60 65C63.5 65 66.5 68 66.5 71.5C66.5 74 65 76 63 77V81C63 82.5 61.5 84 60 84C58.5 84 57 82.5 57 81V77C55 76 53.5 74 53.5 71.5C53.5 68 56.5 65 60 65Z" fill="white"/>
+
+  <!-- Text -->
+  <text x="60" y="105" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle">SSL SECURE</text>
+</svg>

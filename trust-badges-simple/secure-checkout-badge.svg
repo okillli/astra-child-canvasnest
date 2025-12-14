@@ -1,0 +1,12 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="60" cy="60" r="55" fill="#3498db"/>
+  <circle cx="60" cy="60" r="55" fill="none" stroke="#2980b9" stroke-width="3"/>
+
+  <!-- Shield with checkmark -->
+  <path d="M60 30L78 38V52C78 63 60 73 60 73C60 73 42 63 42 52V38L60 30Z" fill="white"/>
+  <path d="M50 56L56 62L70 48" stroke="#27ae60" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Text -->
+  <text x="60" y="98" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">SECURE</text>
+  <text x="60" y="110" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="white" text-anchor="middle">CHECKOUT</text>
+</svg>
